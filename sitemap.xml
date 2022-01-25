@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.whkblog.work/2022/01/16/jxnu/</loc>
+    <loc>https://www.whkblog.work/2022/01/16/Vue+Django%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E9%A1%B9%E7%9B%AE%E4%B8%80/</loc>
     
     <lastmod>2022-01-25</lastmod>
     
@@ -102,13 +102,6 @@
 
   
   <url>
-    <loc>https://www.whkblog.work/tags/%E9%97%B2%E8%AF%9D/</loc>
-    <lastmod>2022-01-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.whkblog.work/tags/python/</loc>
     <lastmod>2022-01-25</lastmod>
     <changefreq>daily</changefreq>
@@ -117,6 +110,13 @@
   
   <url>
     <loc>https://www.whkblog.work/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
+    <lastmod>2022-01-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.whkblog.work/tags/%E9%97%B2%E8%AF%9D/</loc>
     <lastmod>2022-01-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
