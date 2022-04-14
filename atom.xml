@@ -6,7 +6,7 @@
   <link href="https://www.whkblog.work/atom.xml" rel="self"/>
   
   <link href="https://www.whkblog.work/"/>
-  <updated>2022-04-12T13:42:39.821Z</updated>
+  <updated>2022-04-14T08:20:58.595Z</updated>
   <id>https://www.whkblog.work/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>sort()的一个小点</title>
+    <link href="https://www.whkblog.work/2022/04/14/sort%E7%9A%84%E4%B8%80%E4%B8%AA%E5%B0%8F%E7%82%B9/"/>
+    <id>https://www.whkblog.work/2022/04/14/sort%E7%9A%84%E4%B8%80%E4%B8%AA%E5%B0%8F%E7%82%B9/</id>
+    <published>2022-04-14T08:02:51.000Z</published>
+    <updated>2022-04-14T08:20:58.595Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天看一篇python面试真题的时候，有一道题</p><p>内容如下：</p><p><strong>s = “ajldjlajfdljfddd”，去重并从小到大排序输出”adfjl”</strong></p><p>我比较懒，就直接套写了</p><p><img src="https://www.whkblog.work/blog/images/image-20220414160607433.png" alt="image-20220414160607433"></p><p>这里报错是说join智能套用在可迭代的数据类型，</p><p>但是如果分开写的话就可以了</p><p><img src="https://www.whkblog.work/blog/images/image-20220414160823118.png" alt="image-20220414160823118"></p><p>这里的话我上网查了一下，是sort函数的问题，sort只对列表本身排序，它没有返回值</p><p>所以你直接套在里面写，就相当于给join一个空值，这当然是没有用的，控制不可迭代。</p><p>分开写就相当于先排序了，然后传进去</p><p>正确的想法应该是</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">&#x27;ajldjlajfdljfddd&#x27;</span></span><br><span class="line">s = <span class="built_in">list</span>(<span class="built_in">set</span>(s)).sort()</span><br><span class="line">print(<span class="string">&quot;&quot;</span>.join(s))</span><br></pre></td></tr></table></figure><p>或者使用sorted()这个是可迭代的</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">&quot;&quot;</span>.join(<span class="built_in">sorted</span>(<span class="built_in">list</span>(<span class="built_in">set</span>(s)))))</span><br></pre></td></tr></table></figure><p>然后就这样</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;今天看一篇python面试真题的时候，有一道题&lt;/p&gt;
+&lt;p&gt;内容如下：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;s = “ajldjlajfdljfddd”，去重并从小到大排序输出”adfjl”&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;我比较懒，就直接套写了&lt;/p&gt;
+&lt;p&gt;&lt;img src</summary>
+      
+    
+    
+    
+    <category term="杂七杂八" scheme="https://www.whkblog.work/categories/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/"/>
+    
+    
+    <category term="python" scheme="https://www.whkblog.work/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>SortingAlgorithm</title>
