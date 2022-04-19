@@ -6,7 +6,7 @@
   <link href="https://www.whkblog.work/atom.xml" rel="self"/>
   
   <link href="https://www.whkblog.work/"/>
-  <updated>2022-04-18T12:15:26.227Z</updated>
+  <updated>2022-04-19T02:02:07.026Z</updated>
   <id>https://www.whkblog.work/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://www.whkblog.work/2022/04/18/%E9%97%B2%E8%AF%9D/"/>
     <id>https://www.whkblog.work/2022/04/18/%E9%97%B2%E8%AF%9D/</id>
     <published>2022-04-18T12:11:20.000Z</published>
-    <updated>2022-04-18T12:15:26.227Z</updated>
+    <updated>2022-04-19T02:02:07.026Z</updated>
     
     <content type="html"><![CDATA[<p>今天又开始继续写两个月前开的前后端分离项目，写了一下午，可算是把新闻模块给搞定了。后端api做完了(?)，不知道啥问题，就是明明图片地址都是正确的，还是拿不到数据。就先不管了，就这样吧，明天争取将前端的新闻模块也搞定（主要是换了个思路，以前都是模仿院官网，神经病！我干嘛还要分两种新闻类别，不都是新闻，搞得我后台重复写）。就酱</p>]]></content>
     
