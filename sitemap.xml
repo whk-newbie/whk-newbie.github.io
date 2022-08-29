@@ -221,14 +221,21 @@
   </url>
   
   <url>
-    <loc>https://www.whkblog.work/tags/git/</loc>
+    <loc>https://www.whkblog.work/tags/python/</loc>
     <lastmod>2022-08-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.whkblog.work/tags/python/</loc>
+    <loc>https://www.whkblog.work/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
+    <lastmod>2022-08-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.whkblog.work/tags/git/</loc>
     <lastmod>2022-08-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -249,20 +256,6 @@
   </url>
   
   <url>
-    <loc>https://www.whkblog.work/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
-    <lastmod>2022-08-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.whkblog.work/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2022-08-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.whkblog.work/tags/%E9%97%B2%E8%AF%9D/</loc>
     <lastmod>2022-08-29</lastmod>
     <changefreq>daily</changefreq>
@@ -271,6 +264,13 @@
   
   <url>
     <loc>https://www.whkblog.work/tags/TS%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2022-08-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.whkblog.work/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2022-08-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
