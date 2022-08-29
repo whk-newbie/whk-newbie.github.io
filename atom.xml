@@ -6,7 +6,7 @@
   <link href="https://www.whkblog.work/atom.xml" rel="self"/>
   
   <link href="https://www.whkblog.work/"/>
-  <updated>2022-08-28T07:06:35.439Z</updated>
+  <updated>2022-08-29T12:49:27.767Z</updated>
   <id>https://www.whkblog.work/</id>
   
   <author>
@@ -21,22 +21,36 @@
     <link href="https://www.whkblog.work/2022/08/28/redis-learn/"/>
     <id>https://www.whkblog.work/2022/08/28/redis-learn/</id>
     <published>2022-08-28T07:06:35.000Z</published>
-    <updated>2022-08-28T07:06:35.439Z</updated>
+    <updated>2022-08-29T12:49:27.767Z</updated>
+    
+    <content type="html"><![CDATA[<p>This is a note to record the learning Redis</p><h1 id="What-is-Redis？"><a href="#What-is-Redis？" class="headerlink" title="What is Redis？"></a>What is Redis？</h1><p>Redis is a NoSQL Database,using the key-value storage system,it’s one of the most popular and open source database</p><p><em>tips: In this note I’ll using the docker  to learn and practise the Redis</em></p><h1 id="Install-the-Redis-in-docker"><a href="#Install-the-Redis-in-docker" class="headerlink" title="Install the Redis in docker"></a>Install the Redis in docker</h1><p>before create an container of Redis, we should install the Docker in our operate system.</p><p>I’m using Manjaro ,so it’s very easy to install, you need four steps altogether.</p><ul><li><p>step one:  install</p><ul><li><code>sudo pacman -S docker</code> maybe someone is -Sy</li></ul></li><li><p>step two:  add the docker as system service</p><ul><li><code>sudo systemctl start docker.service</code></li></ul></li><li><p>step three: check is success</p><ul><li><code>sudo docker version</code> </li><li><code>sudo docker info</code></li></ul></li><li><p>step four : adds the current user of the system to the user group,in this way, you don’t need to us the sudo in the future</p><ul><li><code>sudo usermod -aG docker $USER</code></li><li><code>reboot</code></li></ul></li></ul><hr><p>start the docker: <code>systemctl start docker</code></p><p>after install the Docker,we need get the image from the hub.docker:</p><p><code>docker pull redis</code></p><p>using the <code>docker images</code> commend to check is success</p><p>start an container: <code>docker run -it --name=redis-learn</code></p><p><img src="https://www.whkblog.work/blog/images/redis_learn/image-20220829204132883.png" alt="image-20220829204132883"></p><p>start another teminal to check is success : <code>docker ps</code></p><p><img src="https://www.whkblog.work/blog/images/redis_learn/image-20220829204245808.png" alt="image-20220829204245808"></p><p>now we can sure that we have create a container of Redis，but we can not to operate the database</p><p>so we need another commond:</p><p>​    <code>docker exec -it redis-learn redis-cli</code></p><p><img src="https://www.whkblog.work/blog/images/redis_learn/image-20220829204610216.png" alt="image-20220829204610216"></p><p>  by the  way, if we need to save to next learn,all we need is just: <code>docker stop redis-learn</code></p><p>and next time we just need to <code>docker start redis-learn</code> to continue to learn</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;This is a note to record the learning Redis&lt;/p&gt;
+&lt;h1 id=&quot;What-is-Redis？&quot;&gt;&lt;a href=&quot;#What-is-Redis？&quot; class=&quot;headerlink&quot; title=&quot;What is Redis</summary>
+      
     
     
     
     
+    <category term="docker" scheme="https://www.whkblog.work/tags/docker/"/>
+    
+    <category term="learn" scheme="https://www.whkblog.work/tags/learn/"/>
+    
+    <category term="redis" scheme="https://www.whkblog.work/tags/redis/"/>
     
   </entry>
   
   <entry>
     <title>docker lean</title>
-    <link href="https://www.whkblog.work/2022/08/28/docker/"/>
-    <id>https://www.whkblog.work/2022/08/28/docker/</id>
+    <link href="https://www.whkblog.work/2022/08/28/docker-learn/"/>
+    <id>https://www.whkblog.work/2022/08/28/docker-learn/</id>
     <published>2022-08-28T06:44:58.000Z</published>
-    <updated>2022-08-29T10:05:54.222Z</updated>
+    <updated>2022-08-29T12:36:00.736Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="What-is-Docker"><a href="#What-is-Docker" class="headerlink" title="What is Docker?"></a>What is Docker?</h1><p>Docker is an open source application container , which can  package programs and program environments together. In this way,  it’s can fixed the problem of the unvailiability of the program due to eviromenttal changes. In a simple way to descript of it, it’s similar to virtual machine. Docker is smaller and faster than virtual machine, And the Docker does not virtualize the hardware. For using docker, the release of applications is also faster.</p><h2 id="three-parts-of-dock"><a href="#three-parts-of-dock" class="headerlink" title="three parts of dock"></a>three parts of dock</h2><ul><li>images,</li><li>container</li><li>reponsitory</li></ul><h1 id="Common-commends"><a href="#Common-commends" class="headerlink" title="Common commends"></a>Common commends</h1><p><code>systemctl  start/stop/status/enable docker</code></p><p><em>Respectively represent: start stop to check the status And startup docker</em></p><h2 id="common-image-commends"><a href="#common-image-commends" class="headerlink" title="common image commends"></a>common image commends</h2><p><code>docker imgaes</code>  <em>show the the images in the local system</em> , can use -a/-q to show all or only show images id</p><p><code>docker search [option]  name</code>    <em>find the images from <a href="https://hub.docker.com/">https://hub.docker.com</a></em>  options: </p><p><code>docker pull name[:TAG]</code>    <em>download the images</em></p><p><code>docker system df</code>  <em>check the space occupied  by images or container or data</em>     </p><p><code>docker rmi name/image_id</code>  <em>delete the image which named name,use  -f to force deletion,we also can use this to delete some images in once; it also supports parameter passing ,you can delete all by this:<code>docker rmi $(docker images -qa)</code></em>   <del>it’s similar to shell rm commend</del></p><p>[^tips]: responsitory name, tags are &lt; none &gt; images commonly known as dangling images</p><h2 id="common-container-commends"><a href="#common-container-commends" class="headerlink" title="common container commends"></a>common container commends</h2><p>new and start a container:</p><p><code>docker run [OPTIONS] IMGAE [COMMAND] [ARG..]</code></p><p><em>common options:</em> </p><ul><li>–name      <em>set the container name</em></li><li>-d             <em>run the container in the background and return the container ID</em></li><li>-i             <em>run the container in an interactive mode, usually used with -t</em>        </li><li>-t             <em>Start the interactive container (there is a pseudo -terminal at the front desk, waiting for interaction)</em></li><li>-P           random port mapping</li><li>-p           set the port mapping</li></ul><p><code>docker ps</code>  <em>show all containers that are running</em></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="What-is-Docker"><a href="#What-is-Docker" class="headerlink" title="What is Docker?"></a>What is Docker?</h1><p>Docker is an open source application container , which can  package programs and program environments together. In this way,  it’s can fixed the problem of the unvailiability of the program due to eviromenttal changes. In a simple way to descript of it, it’s similar to virtual machine. Docker is smaller and faster than virtual machine, And the Docker does not virtualize the hardware. For using docker, the release of applications is also faster.</p><h2 id="three-parts-of-dock"><a href="#three-parts-of-dock" class="headerlink" title="three parts of dock"></a>three parts of dock</h2><ul><li>images,</li><li>container</li><li>reponsitory</li></ul><h1 id="Common-commends"><a href="#Common-commends" class="headerlink" title="Common commends"></a>Common commends</h1><p><code>systemctl  start/stop/status/enable docker</code></p><p><em>Respectively represent: start stop to check the status And startup docker</em></p><h2 id="common-image-commends"><a href="#common-image-commends" class="headerlink" title="common image commends"></a>common image commends</h2><p><code>docker images</code>  <em>show the the images in the local system</em> , can use -a/-q to show all or only show images id</p><p><code>docker search [option]  name</code>    <em>find the images from <a href="https://hub.docker.com/">https://hub.docker.com</a></em>  options: </p><p><code>docker pull name[:TAG]</code>    <em>download the images</em></p><p><code>docker system df</code>  <em>check the space occupied  by images or container or data</em>     </p><p><code>docker rmi name/image_id</code>  <em>delete the image which named name,use  -f to force deletion,we also can use this to delete some images in once; it also supports parameter passing ,you can delete all by this:<code>docker rmi $(docker images -qa)</code></em>   <del>it’s similar to shell rm commend</del></p><p>[^tips]: responsitory name, tags are &lt; none &gt; images commonly known as dangling images</p><h2 id="common-container-commends"><a href="#common-container-commends" class="headerlink" title="common container commends"></a>common container commends</h2><p>new and start a container:</p><p><code>docker run [OPTIONS] IMGAE [COMMAND] [ARG..]</code></p><p><em>common options:</em> </p><ul><li>–name      <em>set the container name</em></li><li>-d             <em>run the container in the background and return the container ID</em></li><li>-i             <em>run the container in an interactive mode, usually used with -t</em>        </li><li>-t             <em>Start the interactive container (there is a pseudo -terminal at the front desk, waiting for interaction)</em></li><li>-P           random port mapping</li><li>-p           set the port mapping</li></ul><p><code>docker ps</code>  <em>show all containers that are running</em></p>]]></content>
     
     
       
